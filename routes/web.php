@@ -17,8 +17,7 @@ Route::get('/', function () {
 );
 
 /* En la vista search.blade.php, crear un formulario que tenga únicamente un campo de texto. 
-Este formulario tendrá el objetivo de buscar actores. 
-(Tener en cuenta que el formulario deberá apuntar a la ruta localhost:8000/actors/result)
+Este formulario tendrá el objetivo de buscar actores. (Tener en cuenta que el formulario deberá apuntar a la ruta localhost:8000/actors/result)
 Crear la ruta /actors/result/{request}, que usará el método ActorsController@result, y 
 retorne la vista result.blade.php.
 En el controlador ActorsController, el método result deberá utilizar Request y 

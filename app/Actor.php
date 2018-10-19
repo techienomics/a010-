@@ -13,11 +13,11 @@ class Actor extends Model {
         return $this->first_name . ' ' . $this->last_name;
     }
 
-	static function querySearch($request) {
-
-        return $query->where('first_name', 'LIKE', '%' . $request->first_name . '%')
+/*	static function querySearch(Request $request) {
+        $query  where('first_name', 'LIKE', '%' . $request->first_name . '%')
                      ->orWhere('last_name', 'LIKE', '%' . $request->last_name . '%')
                      ->orderBy('last_name');
+        return $query;
     }
-
+*/
 }

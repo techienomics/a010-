@@ -3,8 +3,9 @@
 @section('title', 'Search Actors')
 
 @section('main_content')
+
 	<h3>Search Actors by name:</h3>
-    <form action="/actors/results" method="post">
+    <form action="/actors/results" method="POST" >
         @csrf
         <div class="form-group">
             <label for="first_name">By First Name: </label>
@@ -17,4 +18,5 @@
         
         <button type="submit" class="btn btn-success">Search</button>
     </form>
+
 @endsection

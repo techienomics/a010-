@@ -49,10 +49,13 @@ class ActorsController extends Controller {
 
     # Search for the specified resource from storage.
     public function result(Request $request) {
-        $actorsWhereName = Movie::querySearch($request)->get();
         
-            #return redirect('actors.results');
+        $actorsWhereName = Actor::where('first_name', 'LIKE', '%' . $request->first_name . '%')
+                     ->orWhere('last_name', 'LIKE', '%' . $request->last_name . '%')
+                     ->orderBy('last_name');
 
+        # $actorsWhereName = Actor::querySearch($request)->get();
+        
         return view('actors.results')->with(compact('actorsWhereName', 'request'));
     }
 }
